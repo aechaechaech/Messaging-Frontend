@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secure Message</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="js/socket.io/socket.io.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+
+    <body>    
+        <div class="chat_space">
+            <div id="message_area"></div>
+            <div id="input_space">
+                <input type="text" id="message_input" placeholder="Enter a message..." onKeyDown="getInput(event);"/>
+            </div>
+        </div>
+
+        <div class="channelSpace">
+            <div id="channelList"></div>
+        </div>
+
+        <script type="text/javascript" src="js/render.js"></script>
+    </body>
+</html>
+
+<!-- TO DO:
+- make scrollbars thin and darker
+- make it so when you press enter when a friend frame is selected, that friend frame goes to the top of the list
+!-->

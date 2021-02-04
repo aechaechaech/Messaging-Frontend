@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+input, div {
+    font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+}
+
+.chat_space {
+    padding: 10px;
+    height: 100%;
+    width: 75%;
+    float: right;
+    background-color: #21252b;
+}
+
+.channelSpace {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    height: 100%;
+    width: 25%;
+    float: left;
+    background-color: #21252b;
+}
+
+.channelDiv {
+    width:100%;
+    height:75px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #343942;
+}
+
+#input_space {
+    margin-top: 10px;
+    width: 100%;
+    height: 5%;
+    background-color: #21252b;
+}
+
+#message_area {
+    width: 100%;
+    height: 93%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #282c34;
+    color: #757575;
+    white-space: pre;
+    overflow: auto;
+}
+
+#message_input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-indent: 10px;
+    border-style: hidden;
+    outline: 0px solid transparent;
+    background-color: #282c34;
+    color: #757575;
+}
+
+#channelList {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #282c34;
+    overflow: auto;
+}
