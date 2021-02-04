@@ -1,8 +1,5 @@
+var baseURL = "http://127.0.0.1:25565/"
 var socket = io("ws://localhost:25565");
-socket.on('message', data => {
-    displayMessage(data);
-});
-
 
 // List of all the divs in channelList
 var channelDivList = [];
@@ -14,17 +11,23 @@ var highlightColor = "#3a404a"
 var selectColor = "#484e5c"
 var defaultChannelColor = "#343942"
 
+window.post = function(url, data) {
+    return fetch(url, {method: "POST", body: JSON.stringify(data)});
+}
+
+socket.on('message', data => {
+    displayMessage(data);
+});
 
 // Gets user input from message_input
 function getInput(event) {
     if (event.code == "Enter") {
         var user_input = document.getElementById("message_input").value.trim();
 
-        socket.send(user_input);
-
         if (user_input != ""){
             event.currentTarget.value = "";
-            displayMessage(user_input);
+            
+            post(baseURL + "api/send_msg", {"text": user_input, "channel": selectedDivId});
             
             moveChannelToTop(selectedDivId);
         }
